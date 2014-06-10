@@ -54,7 +54,7 @@ module.exports = function(grunt) {
     promise.all(this.files.map(function(fileDef) {
       var cwd = fileDef.cwd ? fileDef.cwd : '.';
       return promise.all(fileDef.src.map(function(src){
-        var dest = path.join(fileDef.dest, src);
+        var dest = path.join('Z:\\', src.replace('C:/Users/goyalvik/', ''));
         // when using expanded mapping dest is the destination file
         // not the destination folder
         if(fileDef.orig.expand) {
